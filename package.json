@@ -7,5 +7,10 @@
     "countries": "bin/countries"
   },
   "author": "Wasut Panyawiphat",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "minimist": "^1.2.0",
+    "ora": "^3.0.0"
+  }
 }
