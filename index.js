@@ -2,11 +2,12 @@ const minimist = require('minimist');
 
 module.exports = () => {
   const args = minimist(process.argv.slice(2));
-  const command = args._[0] || 'help';
+  const firstOption = Object.entries(args)[1] || ['help'];
+  const [optionName, optionValue] = firstOption;
 
   try {
-	require(`./commands/${command}`)(args);
+	require(`./options/${optionName}`)(optionValue);
   } catch (e) {
-  	console.error(`${command} is not a valid command`);
+  	console.error(`Option ${optionName} is not a valid command`);
   }
 }
