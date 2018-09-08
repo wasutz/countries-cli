@@ -8,9 +8,8 @@ module.exports = async name => {
  	await countryService.getCountriesByName(name).then(countries => {
 		spinner.stop();
 		printCountries(countries);
-    }).catch(e => {
+    }).catch(() => {
 		spinner.stop();
-		console.log(e);
 		console.log(`Cannot find countries name ${name}`);
   	});
 };
