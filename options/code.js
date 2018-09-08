@@ -1,18 +1,15 @@
 const ora = require('ora');
 const countryService = require('../services/countryService');
+const { printCountry } = require('../utils/print');
 
-module.exports = async (value) => {
+module.exports = async code => {
  	const spinner = ora().start();
 
- 	await countryService.getCountryByCode(value).then(result => {
+ 	await countryService.getCountryByCode(code).then(country => {
 		spinner.stop();
-		
-		console.log(`Name: ${result.data.name}`);
-		console.log(`Capital: ${result.data.capital}`);
-		console.log(`Region: ${result.data.region}`);
-		console.log(`Population: ${result.data.population}`);
+		printCountry(country);
     }).catch(() => {
 		spinner.stop();
-		console.log(`Cannot find country code ${value}`);
+		console.log(`Cannot find country code ${code}`);
   	});
 };

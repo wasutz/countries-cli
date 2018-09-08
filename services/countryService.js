@@ -8,6 +8,13 @@ module.exports = {
 	  	baseURL: BASE_URL,
 		method: 'get',
 		url: `/alpha/${code}`,
-	  });
+	  }).then(result => result.data);
+	},
+	getCountriesByName(name) {
+	  return axios({
+	  	baseURL: BASE_URL,
+		method: 'get',
+		url: `/name/${name}`,
+	  }).then(result => result.data);
 	}
 };
