@@ -1,5 +1,5 @@
 {
-  "name": "countries-cli",
+  "name": "@wasutz/countries-cli",
   "version": "1.0.0",
   "description": "Get information about countries from the command line",
   "main": "index.js",
