@@ -1,6 +1,6 @@
 {
   "name": "@wasutz/countries-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get information about countries from the command line",
   "main": "index.js",
   "homepage": "https://github.com/wasutz/countries-cli#readme",

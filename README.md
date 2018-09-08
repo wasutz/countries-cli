@@ -14,6 +14,7 @@ $ countries --help
 
     --name           Get countries using name
     --code           Get country using country code
+    --capital        Get countries using capital
     --version        Show package version
     --help           Show help menu for a command
 ```
