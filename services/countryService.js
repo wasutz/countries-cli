@@ -25,5 +25,13 @@ module.exports = {
         method: 'get',
         url: `/capital/${capital}`,
       }).then(result => result.data);
+    },
+
+    getCountriesByCurrency(currency) {
+      return axios({
+        baseURL: BASE_URL,
+        method: 'get',
+        url: `/currency/${currency}`,
+      }).then(result => result.data);
     }
 };
