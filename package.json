@@ -1,12 +1,15 @@
 {
   "name": "@wasutz/countries-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Get information about countries from the command line",
   "main": "index.js",
   "homepage": "https://github.com/wasutz/countries-cli#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wasutz/countries-cli.git"
+    "url": "git://github.com/wasutz/countries-cli.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "bin": {
     "countries": "bin/countries"
